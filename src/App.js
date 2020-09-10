@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { HashRouter, Route } from "react-router-dom";
 import About from "./routes/About";
-import Home from "./routes/Home";
+import Container from "./routes/Container";
 import Navigation from "./components/Navigation";
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
       // Link를 포함하는 Navigation은 반드시 BrowserRouter or HashRouter안에 있어야 한다.
       <HashRouter>
         <Navigation />
-        <Route path="/" exact={true} component={Home}></Route>
+        <Route path="/" exact={true} component={Container}></Route>
         <Route path="/about" component={About}></Route>
       </HashRouter>
     );

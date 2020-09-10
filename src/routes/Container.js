@@ -1,7 +1,8 @@
-import React, { Component } from "react";
-import Obj from "../components/Obj";
+import React from "react";
+import Presenter from "../components/Presenter";
+// import "./Home.css";
 
-class About extends Component {
+class Container extends React.Component {
   state = { isMounted: true };
 
   render() {
@@ -15,11 +16,11 @@ class About extends Component {
         >
           {isMounted ? "Unmount" : "Mount"}
         </button>
-        {isMounted && <Obj />}
+        {isMounted && <Presenter />}
         {isMounted && <div>Scroll to zoom, drag to rotate</div>}
       </>
     );
   }
 }
 
-export default About;
+export default Container;
